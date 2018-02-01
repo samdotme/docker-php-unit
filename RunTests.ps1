@@ -1,1 +1,5 @@
-docker run -it --rm --name phpunit -v C:\ws\wp-plugins\blackcat\src:/src samiam236/phpunit bash runTests.sh
+Param(
+  [string]$hostSrc
+)
+
+docker run -it --rm --name phpunit -v ${hostSrc}:/src samiam236/phpunit bash runTests.sh
